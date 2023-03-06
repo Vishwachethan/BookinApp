@@ -1,0 +1,488 @@
+
+  PAGE 1
+
+import 'package:easy_splash_screen/easy_splash_screen.dart';
+import '../home.dart';
+import 'package:flutter/material.dart';
+
+class SplashPage extends StatefulWidget {
+  SplashPage({Key? key}) : super(key: key);
+
+  @override
+  _SplashPageState createState() => _SplashPageState();
+}
+
+class _SplashPageState extends State<SplashPage> {
+  @override
+  Widget build(BuildContext context) {
+    return EasySplashScreen(
+      logo: Image.network(
+          'https://cdn4.iconfinder.com/data/icons/logos-brands-5/24/flutter-512.png'),
+      title: Text(
+        "Title",
+        style: TextStyle(
+          fontSize: 18,
+          fontWeight: FontWeight.bold,
+        ),
+      ),
+      backgroundColor: Colors.grey.shade400,
+      showLoader: true,
+      loadingText: Text("Loading..."),
+      navigator: HomePage(),
+      durationInSeconds: 5,
+    );
+  }
+}
+
+import 'dart:async';
+import 'package:easy_splash_screen/easy_splash_screen.dart';
+import '../home.dart';
+import 'package:flutter/material.dart';
+
+class SplashFuturePage extends StatefulWidget {
+  SplashFuturePage({Key? key}) : super(key: key);
+
+  @override
+  _SplashFuturePageState createState() => _SplashFuturePageState();
+}
+
+class _SplashFuturePageState extends State<SplashFuturePage> {
+  Future<Widget> futureCall() async {
+    return Future.value(new HomePage());
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return EasySplashScreen(
+      logo: Image.network(
+          'https://cdn4.iconfinder.com/data/icons/logos-brands-5/24/flutter-512.png'),
+      title: Text(
+        "Title",
+        style: TextStyle(
+          fontSize: 18,
+          fontWeight: FontWeight.bold,
+        ),
+      ),
+      backgroundColor: Colors.grey.shade400,
+      showLoader: true,
+      loadingText: Text("Loading..."),
+      futureNavigator: futureCall(),
+    );
+  }
+}
+
+PAGE 2
+
+dependencies:
+  firebase_phone_auth_handler: ^1.0.8
+
+import 'package:flutter/material.dart';
+import 'package:firebase_phone_auth_handler/firebase_phone_auth_handler.dart';
+
+
+class _MainApp extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return FirebasePhoneAuthProvider(
+      child: MaterialApp(
+        debugShowCheckedModeBanner: false,
+        home: HomeScreen(),
+      ),
+    );
+  }
+}
+
+FirebasePhoneAuthHandler(
+    phoneNumber: "+919876543210",
+    builder: (context, controller) {
+        return SizedBox.shrink();
+    },
+),
+
+FIREBASE ACCOUNT 
+
+App nickname
+Myapp
+Package name
+com.example.lib
+SHA certificate fingerprints
+Type
+Actions
+5d:09:8b:3a:cc:91:98:44:01:21:6c:e7:c1:47:7e:b7:0e:38:70:d5
+SHA-1	
+
+
+JSON FILE(Dart file)
+
+
+{
+  "project_info": {
+    "project_number": "579797014018",
+    "firebase_url": "https://testing-e715f-default-rtdb.firebaseio.com",
+    "project_id": "testing-e715f",
+    "storage_bucket": "testing-e715f.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:579797014018:android:c5a69cc2121f0c2f07b91b",
+        "android_client_info": {
+          "package_name": "com.example.lib"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "579797014018-q9rrmufb410fkh0unno6icg85gm8mcij.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.lib",
+            "certificate_hash": "5d098b3acc91984401216ce7c1477eb70e3870d5"
+          }
+        },
+        {
+          "client_id": "579797014018-sm92el724n1jukmmmff06c6s5v9pvoa5.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCXFRDbb8SH4DT4Y1ce9S93b-bJZCGedrI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "579797014018-sm92el724n1jukmmmff06c6s5v9pvoa5.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:579797014018:android:156e1bff039c320007b91b",
+        "android_client_info": {
+          "package_name": "com.example.phone_auth_project"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "579797014018-b9i37a8j1nenktkum3csbpqgte1kucd9.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.phone_auth_project",
+            "certificate_hash": "5d098b3acc91984401216ce7c1477eb70e3870d5"
+          }
+        },
+        {
+          "client_id": "579797014018-sm92el724n1jukmmmff06c6s5v9pvoa5.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCXFRDbb8SH4DT4Y1ce9S93b-bJZCGedrI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "579797014018-sm92el724n1jukmmmff06c6s5v9pvoa5.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:579797014018:android:01bf3f708ad25b0a07b91b",
+        "android_client_info": {
+          "package_name": "com.example.untitled"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "579797014018-4e64d2vgv6iqifhmvpb42n6cndojlisr.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.untitled",
+            "certificate_hash": "5d098b3acc91984401216ce7c1477eb70e3870d5"
+          }
+        },
+        {
+          "client_id": "579797014018-sm92el724n1jukmmmff06c6s5v9pvoa5.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCXFRDbb8SH4DT4Y1ce9S93b-bJZCGedrI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "579797014018-sm92el724n1jukmmmff06c6s5v9pvoa5.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
+
+
+PAGE 3
+
+Slider
+
+dependencies:
+  flutter_custom_carousel_slider: ^1.2.0
+
+
+import 'package:flutter/material.dart';
+import 'package:flutter_custom_carousel_slider/flutter_custom_carousel_slider.dart';
+
+void main() {
+  runApp(const MyApp());
+}
+
+class MyApp extends StatelessWidget {
+  const MyApp({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      title: 'Flutter Demo',
+      theme: ThemeData(
+        primarySwatch: Colors.blue,
+      ),
+      home: const MyHomePage(title: 'Flutter Custom Carousel Slider Demo'),
+      debugShowCheckedModeBanner: false,
+    );
+  }
+}
+
+class MyHomePage extends StatefulWidget {
+  const MyHomePage({Key? key, required this.title}) : super(key: key);
+  final String title;
+
+  @override
+  State<MyHomePage> createState() => _MyHomePageState();
+}
+
+class _MyHomePageState extends State<MyHomePage> {
+  List<CarouselItem> itemList = [
+    CarouselItem(
+      image: const NetworkImage(
+        'https://miro.medium.com/max/1400/1*RpaR1pTpRa0PUdNdfv4njA.png',
+      ),
+      boxDecoration: BoxDecoration(
+        gradient: LinearGradient(
+          begin: FractionalOffset.bottomCenter,
+          end: FractionalOffset.topCenter,
+          colors: [
+            Colors.blueAccent.withOpacity(1),
+            Colors.black.withOpacity(.3),
+          ],
+          stops: const [0.0, 1.0],
+        ),
+      ),
+      title:
+          'Push your creativity to its limits by reimagining this classic puzzle!',
+      titleTextStyle: const TextStyle(
+        fontSize: 12,
+        color: Colors.white,
+      ),
+      leftSubtitle: '\$51,046 in prizes',
+      rightSubtitle: '4882 participants',
+      rightSubtitleTextStyle: const TextStyle(
+        fontSize: 12,
+        color: Colors.black,
+      ),
+      onImageTap: (i) {},
+    ),
+    CarouselItem(
+      image: const NetworkImage(
+        'https://pbs.twimg.com/profile_banners/1444928438331224069/1633448972/600x200',
+      ),
+      title: '@coskuncay published flutter_custom_carousel_slider!',
+      titleTextStyle: const TextStyle(
+        fontSize: 12,
+        color: Colors.white,
+      ),
+      leftSubtitle: '11 Feb 2022',
+      rightSubtitle: 'v1.0.0',
+      onImageTap: (i) {},
+    ),
+    CarouselItem(
+      image: const ExactAssetImage('assets/justec.jpg'),
+      title: 'npx coskuncay',
+      titleTextStyle: const TextStyle(
+        fontSize: 12,
+        color: Colors.white,
+      ),
+      leftSubtitle: '27 Mar 2022',
+      rightSubtitle: 'v1.1.0',
+      onImageTap: (i) {},
+    ),
+  ];
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: Text(widget.title),
+      ),
+      body: SingleChildScrollView(
+        child: Center(
+          child: Column(
+            children: [
+              const SizedBox(height: 20),
+              Column(
+                children: [
+                  const Text('Custom BoxDecoration and Autoplay'),
+                  CustomCarouselSlider(
+                    items: itemList,
+                    height: 150,
+                    subHeight: 50,
+                    width: MediaQuery.of(context).size.width * .9,
+                    autoplay: true,
+                  ),
+                ],
+              ),
+              const SizedBox(height: 20),
+              Column(
+                children: [
+                  const Text(
+                      'Show Only Customize Indicators and Bottom Position'),
+                  CustomCarouselSlider(
+                    items: itemList,
+                    height: 150,
+                    subHeight: 50,
+                    width: MediaQuery.of(context).size.width * .9,
+                    autoplay: false,
+                    showText: false,
+                    showSubBackground: false,
+                    indicatorShape: BoxShape.rectangle,
+                    indicatorPosition: IndicatorPosition.bottom,
+                    selectedDotColor: Colors.red,
+                    unselectedDotColor: Colors.white,
+                  ),
+                ],
+              ),
+              const SizedBox(height: 20),
+              Column(
+                children: [
+                  const Text('Show only images and Autoplay'),
+                  CustomCarouselSlider(
+                    items: itemList,
+                    height: 150,
+                    subHeight: 50,
+                    width: MediaQuery.of(context).size.width * .9,
+                    autoplay: true,
+                    showSubBackground: false,
+                    indicatorPosition: IndicatorPosition.none,
+                    showText: false,
+                  ),
+                ],
+              ),
+            ],
+          ),
+        ),
+      ),
+GRID VIEW
+
+import 'package:flutter/material.dart';
+import 'package:reorderableitemsview/reorderableitemsview.dart';
+
+class GridPageView extends StatefulWidget {
+  @override
+  _GridPageViewState createState() => _GridPageViewState();
+}
+
+class _GridPageViewState extends State<GridPageView> {
+
+  List<StaggeredTileExtended> _listStaggeredTileExtended = <StaggeredTileExtended>[
+    StaggeredTileExtended.count(2, 2),
+    StaggeredTileExtended.count(2, 1),
+    StaggeredTileExtended.count(1, 2),
+    StaggeredTileExtended.count(1, 1),
+    StaggeredTileExtended.count(2, 2),
+    StaggeredTileExtended.count(1, 2),
+    StaggeredTileExtended.count(1, 1),
+    StaggeredTileExtended.count(3, 1),
+    StaggeredTileExtended.count(1, 1),
+    StaggeredTileExtended.count(4, 1),
+  ];
+
+  List<Widget> _tiles = <Widget>[
+    _Example01Tile(Key("a"),Colors.green, Icons.widgets),
+    _Example01Tile(Key("b"),Colors.lightBlue, Icons.wifi),
+    _Example01Tile(Key("c"),Colors.amber, Icons.panorama_wide_angle),
+    _Example01Tile(Key("d"),Colors.brown, Icons.map),
+    _Example01Tile(Key("e"),Colors.deepOrange, Icons.send),
+    _Example01Tile(Key("f"),Colors.indigo, Icons.airline_seat_flat),
+    _Example01Tile(Key("g"),Colors.red, Icons.bluetooth),
+    _Example01Tile(Key("h"),Colors.pink, Icons.battery_alert),
+    _Example01Tile(Key("i"),Colors.purple, Icons.desktop_windows),
+    _Example01Tile(Key("j"),Colors.blue, Icons.radio),
+  ];
+
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: Text("List Demo"),
+      ),
+      body: ReorderableItemsView(
+        onReorder: (int oldIndex, int newIndex) {
+          setState(() {
+            _tiles.insert(newIndex, _tiles.removeAt(oldIndex));
+          });
+        },
+        children: _tiles,
+        crossAxisCount: 4,
+        isGrid: true,
+        staggeredTiles: _listStaggeredTileExtended,
+        longPressToDrag: false,
+      ),
+    );
+  }
+}
+
+class _Example01Tile extends StatelessWidget {
+  _Example01Tile(Key key, this.backgroundColor, this.iconData): super(key: key);
+
+  final Color backgroundColor;
+  final IconData iconData;
+
+  @override
+  Widget build(BuildContext context) {
+    return new Card(
+      color: backgroundColor,
+      child: new InkWell(
+        onTap: () {},
+        child: new Center(
+          child: new Padding(
+            padding: EdgeInsets.all(4.0),
+            child: new Icon(
+              iconData,
+              color: Colors.white,
+            ),
+          ),
+        ),
+      ),
+    );
+  }
+}
+    );
+  }
+}
